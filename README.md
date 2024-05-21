@@ -1,1 +1,1 @@
-This project is a console-based slot machine simulation where players can deposit money, place bets, and spin the slot machine to try their luck. The game includes features such as customizable bet amounts, multiple betting lines, and dynamically generated slot results based on predefined symbol probabilities.
+

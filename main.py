@@ -12,7 +12,7 @@ symbol_count = {
     "B": 4,
     "C": 6,
     "D": 8,
-    "W": 1  # Wild symbol with limited occurrences
+    "W": 1  
 }
 
 symbol_value = {
@@ -20,7 +20,7 @@ symbol_value = {
     "B": 4,
     "C": 3,
     "D": 2,
-    "W": 0  # Wild has no direct value but substitutes for other symbols
+    "W": 0 
 }
 
 def check_winnings(columns, lines, bet, values):
@@ -28,7 +28,7 @@ def check_winnings(columns, lines, bet, values):
     winning_lines = []
     for line in range(lines):
         symbol = columns[0][line]
-        if symbol == "W":  # Wild on the first reel can't define the winning line
+        if symbol == "W": 
             continue
         for column in columns:
             symbol_to_check = column[line]
@@ -38,10 +38,10 @@ def check_winnings(columns, lines, bet, values):
             winnings += values[symbol] * bet
             winning_lines.append(line + 1)
 
-    # Jackpot: All symbols are identical across the board
+   
     if all(columns[col][row] == symbol or columns[col][row] == "W"
            for col in range(COLS) for row in range(ROWS)):
-        winnings += 100 * bet  # Jackpot bonus
+        winnings += 100 * bet  
         print("JACKPOT! 🎉")
 
     return winnings, winning_lines
@@ -145,7 +145,7 @@ def spin(balance, free_spins):
     print(f"You won ${winnings}.")
     if winnings > 0:
         print(f"You won on lines:", *winning_lines)
-        if random.randint(1, 10) <= 3:  # 30% chance of free spin
+        if random.randint(1, 10) <= 3:  
             free_spins += 1
             print("You earned a free spin!")
     else:

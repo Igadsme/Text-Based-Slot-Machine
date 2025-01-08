@@ -1,1 +1,3 @@
 This project is a console-based slot machine simulation where players deposit money, place bets on up to three lines, and spin to try their luck. Players set their bet amounts within a range of $1 to $100 per line, with the total bet validated against their balance. The slot machine features a 3x3 grid with symbols "A," "B," "C," and "D," each appearing with different frequencies and values. Players can win based on the alignment of symbols on their chosen bet lines, with winnings calculated accordingly. The game loop allows continuous play until the player chooses to quit, displaying the final balance upon exit.
+    "W": 1  # Wild symbol with limited occurrences
+    "W": 0  # Wild has no direct value but substitutes for other symbols
